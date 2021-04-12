@@ -9,9 +9,11 @@
 // between points used as a basis for a version applicable here.
 ///////////////////////////////////////////////////////////////////////////////
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Scanner;
 import java.util.stream.Stream;
 import java.util.zip.DataFormatException;
 
@@ -33,6 +35,7 @@ public class Backend implements BackendInterface {
    */
   public Backend (MapperReader dataReader) throws DataFormatException {
     this.dataReader = dataReader;
+    this.graph = new CS400Graph<BuildingInterface>();
     
     List<BuildingInterface> buildings = dataReader.getBuildings();
     // Iterate through all buildings, adding vertices
@@ -64,6 +67,79 @@ public class Backend implements BackendInterface {
     conditionMultiplier = 1.0;
   }
 
+  public Backend (Scanner input) throws DataFormatException {
+    dataReader = new MapperReader(input);
+    this.graph = new CS400Graph<BuildingInterface>();
+    
+    List<BuildingInterface> buildings = dataReader.getBuildings();
+    // Iterate through all buildings, adding vertices
+    for (int i = 0; i < buildings.size(); i++) {
+      try {
+        graph.insertVertex(buildings.get(i));
+      }
+      catch (Exception e) {
+        throw new DataFormatException("Invalid building vertex encountered");
+      }
+    }
+    // Once vertices added, add edges
+    for (int i = 0; i < buildings.size(); i++) {
+      BuildingInterface current = buildings.get(i);
+      for (int j = 0; j < buildings.get(i).getConnectedNodes().size(); j++) {
+        BuildingInterface target = current.getConnectedNodes().get(j);
+        try {
+          int weight = getDistance(current, target);
+          graph.insertEdge(current, target, weight);
+        }
+        catch (Exception e) {
+          throw new DataFormatException("Invalid path encountered.");
+        }
+      }
+    }
+    // Set default travel speed and condition multiplier
+    // I've chosen 4fps based on 8 minutes from Lucky to Birge (4.25) being slightly fast
+    travelSpeed = 4.0;
+    conditionMultiplier = 1.0;
+  }
+
+  public Backend (String[] args) throws DataFormatException {
+    try {
+      dataReader = new MapperReader(args);
+    } catch (FileNotFoundException badFile) {
+      throw new DataFormatException("Input file was not found.");
+    }
+    
+    this.graph = new CS400Graph<BuildingInterface>();
+    
+    List<BuildingInterface> buildings = dataReader.getBuildings();
+    // Iterate through all buildings, adding vertices
+    for (int i = 0; i < buildings.size(); i++) {
+      try {
+        graph.insertVertex(buildings.get(i));
+      }
+      catch (Exception e) {
+        throw new DataFormatException("Invalid building vertex encountered.");
+      }
+    }
+    // Once vertices added, add edges
+    for (int i = 0; i < buildings.size(); i++) {
+      BuildingInterface current = buildings.get(i);
+      for (int j = 0; j < buildings.get(i).getConnectedNodes().size(); j++) {
+        BuildingInterface target = current.getConnectedNodes().get(j);
+        try {
+          int weight = getDistance(current, target);
+          graph.insertEdge(current, target, weight);
+        }
+        catch (Exception e) {
+          throw new DataFormatException("Invalid path encountered.");
+        }
+      }
+    }
+    // Set default travel speed and condition multiplier
+    // I've chosen 4fps based on 8 minutes from Lucky to Birge (4.25) being slightly fast
+    travelSpeed = 4.0;
+    conditionMultiplier = 1.0;
+  }
+  
   @Override
   public double getPathTime(BuildingInterface currentVertex, BuildingInterface destinationVertex)
       throws NoSuchElementException {
@@ -78,7 +154,7 @@ public class Backend implements BackendInterface {
     // Try to find path cost between vertices, which will throw an exception if this fails
     try {
       int pathCost = graph.getPathCost(currentVertex, destinationVertex);
-      return pathCost * conditionMultiplier / travelSpeed;
+      return pathCost * conditionMultiplier / (travelSpeed * 60);
     }
     catch (NoSuchElementException notFound) {
       throw new NoSuchElementException("No path was found between buildings.");
@@ -91,8 +167,10 @@ public class Backend implements BackendInterface {
     // Create a stream of buildings to filter by type
     Stream<BuildingInterface> buildingStream = dataReader.getBuildings().stream();
     
+    ArrayList<List<BuildingInterface>> options = new ArrayList<List<BuildingInterface>>();
+    
     // Modify stream into an array of path options
-    ArrayList<BuildingInterface> options[] = buildingStream
+    buildingStream
       // Remove current node from consideration
       .filter(b -> b != currentVertex)
       // Filter by type
@@ -109,18 +187,20 @@ public class Backend implements BackendInterface {
       // Remove null paths
       .filter(b -> b != null)
       // Convert to array
-      .toArray(size -> new ArrayList[size]);
+      .forEach(b -> options.add(b));
     
     // If there are no options, throw an exception
-    if (options.length == 0) {
+    if (options.size() == 0) {
       throw new NoSuchElementException("No paths were found.");
     }
     // Else, search through and return the shortest path
-    ArrayList<BuildingInterface> returnVal = options[0];
-    int minCost = graph.getPathCost(currentVertex, options[0].get(options[0].size() - 1));
-    for (int i = 1; i < options.length; i++) {
-      if (graph.getPathCost(currentVertex, options[i].get(options[i].size() - 1)) < minCost) {
-        returnVal = options[i];
+   List<BuildingInterface> returnVal = options.get(0);
+    int minCost = getPathCost(returnVal);
+    for (int i = 1; i < options.size(); i++) {
+      int currentCost = getPathCost(options.get(i));
+      if (currentCost < minCost) {
+        minCost = currentCost;
+        returnVal = options.get(i);
       }
     }
     
@@ -160,7 +240,7 @@ public class Backend implements BackendInterface {
   @Override
   public double getGeneralPathTime(BuildingInterface currentVertex, char destinationType)
       throws NoSuchElementException {
-    return getGeneralPathCost(currentVertex, destinationType) * conditionMultiplier / travelSpeed;
+    return getGeneralPathCost(currentVertex, destinationType) * conditionMultiplier / (travelSpeed * 60);
   }
 
   @Override
@@ -199,13 +279,15 @@ public class Backend implements BackendInterface {
     ArrayList<BuildingInterface> returnVal = new ArrayList<BuildingInterface>();
     List<BuildingInterface> path = shortestPath(currentVertex, destinationVertex);
     
-    // Iterate through all path elements, and if a connected node is not the current or destination or 
-    // a path, add it to the return list
+    // Iterate through all path elements, and if a connected node is not the current, destination, already
+    // in the list, or a path, add it to the return list
     for (int i = 0; i < path.size(); i++) {
       List<BuildingInterface> surrounding = path.get(i).getConnectedNodes();
       for (int j = 0; j < surrounding.size(); j++) {
         BuildingInterface current = surrounding.get(j);
-        if (!current.getTypes().contains(Character.toString('P')) && !current.equals(currentVertex) && !current.equals(destinationVertex)) {
+        if (!current.getTypes().contains(Character.toString('P')) && 
+            !current.equals(currentVertex) && !current.equals(destinationVertex) && 
+            !returnVal.contains(current)) {
           returnVal.add(current);
         }
       }
@@ -220,15 +302,16 @@ public class Backend implements BackendInterface {
     ArrayList<BuildingInterface> returnVal = new ArrayList<BuildingInterface>();
     List<BuildingInterface> path = shortestGeneralPath(currentVertex, destinationType);
     
-    // Iterate through all path elements, and if a connected node is not the current or destination or 
-    // a path, add it to the return list
+    // Iterate through all path elements, and if a connected node is not the current, destination, already 
+    // in the list, or a path, add it to the return list
     for (int i = 0; i < path.size(); i++) {
       List<BuildingInterface> surrounding = path.get(i).getConnectedNodes();
       for (int j = 0; j < surrounding.size(); j++) {
         BuildingInterface current = surrounding.get(j);
         // Note that because we don't know the destination from the call, it's best to use the path directly
         if (!current.getTypes().contains(Character.toString('P')) && 
-            !current.equals(path.get(0)) && !current.equals(path.get(path.size() - 1))) {
+            !current.equals(path.get(0)) && !current.equals(path.get(path.size() - 1)) && 
+            !returnVal.contains(current)) {
           returnVal.add(current);
         }
       }
@@ -282,11 +365,20 @@ public class Backend implements BackendInterface {
     // from the downcast of types
     return (int) Math.round(distance);
   }
+  
+  public int getPathCost(List<BuildingInterface> path) {
+    int returnVal = 0;
+    
+    for(int i = 0; i < path.size()-1; i++) {
+      returnVal += getPathCost(path.get(i), path.get(i+1));
+    }
+    
+    return returnVal;
+  }
 
-  @Override
-  
+
   // Pass-through GraphADT methods
-  
+  @Override
   public boolean insertVertex(BuildingInterface data) {
     return graph.insertVertex(data);
   }
