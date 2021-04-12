@@ -5,6 +5,15 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.zip.DataFormatException;
 
+//--== CS400 File Header Information ==--
+//Name: Colby Brown
+//Email: csbrown7@wisc.edu
+//Team: CC - Red
+//Role: DW
+//TA: Xi Chen
+//Lecturer: Gary Dahl
+//Notes to Grader:
+
 public class MadisonMapperReader implements MapperReaderInterface {
 
   
@@ -55,23 +64,55 @@ public class MadisonMapperReader implements MapperReaderInterface {
     
     
     while (inputScanner.hasNextLine()) {
-      String temp = inputScanner.nextLine();
+      String temp = null;
+      
+      try {
+        temp = inputScanner.nextLine();
+      } catch (Exception e) {
+        temp = null;
+      }
+      
+      if (temp == null)
+        throw new DataFormatException("Error Reading File");
       
       Scanner tempScanner = new Scanner(temp);
       tempScanner.useDelimiter(",");
       
-      String name = tempScanner.next();
-      String buildingTypes = tempScanner.next();
-      Double latitude = tempScanner.nextDouble();
-      Double longitude = tempScanner.nextDouble();
-      String connectedNodes = tempScanner.next();
+      try {
+        String name = tempScanner.next();
+        String buildingTypes = tempScanner.next();
+        Double latitude = tempScanner.nextDouble();
+        Double longitude = tempScanner.nextDouble();
+        String connectedNodes = tempScanner.next();
+        
+        String[] buildingTypeList = buildingTypes.split(";");
+        String typeList = "";
+        for (String type : buildingTypeList) {
+          typeList += type;
+        }
+        String[] connectedNodeNames = connectedNodes.split(";");
+        Building building = new Building(name, typeList, latitude, longitude, connectedNodeNames);
+        
+        tempScanner.close();
+        
+        buildings.add(building);
+        
+        
+        
+      } catch (Exception e) {
+        throw new DataFormatException("Error Reading File");
+      }
+    }
+    
+    try {
       
-      String[] buildingTypeList = buildingTypes.split(" + ");
-      String[] connectedNodeNames = connectedNodes.split(" + ");
+      for (BuildingInterface buildingInterface : buildings) {
+        Building building = (Building)buildingInterface;
+        building.loadConnectedNodes(buildings);
+      }
       
-      Building building = new Building(name, buildingTypeList, latitude, longitude, connectedNodeNames);
-      
-      buildings.add(building);
+    } catch (Exception e) {
+      e.printStackTrace();
     }
     
   }
