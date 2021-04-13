@@ -135,7 +135,7 @@ public class MadisonMapperReader implements MapperReaderInterface {
   public String[][] getBuildingSpecifiers() {
     String[] full = {"Residential", "Educational", "Fitness", "Dining", "Shopping", "Student Life", "Library", "Athletics", "Entertainment", "Path", "Parking"};
     String[] characters = {"R", "E", "F", "D", "T", "S", "L", "A", "M", "P", "K"};
-    String[][] combined = {};
+    String[][] combined = new String[11][2];
     
     for (int i = 0; i < full.length; i++) {
       String fullName = full[i];
