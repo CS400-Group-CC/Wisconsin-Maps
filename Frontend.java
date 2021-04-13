@@ -241,6 +241,7 @@ public class Frontend {
                 int timeSecs = (int) Math.round(60 * (time - timeMins));
                 System.out.print(
                     "The closest building of type " + ident + " is " + timeMins + ":" + timeSecs + " away\n");
+                System.out.println("");
             } catch (Exception e) {
                 System.out.println("Invalid identifier, or no buildings could be found, please"
                     + " try again\n");
