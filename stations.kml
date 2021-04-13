@@ -1,0 +1,1096 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>stations.kml</name>
+	<Schema name="stations" id="stations">
+		<SimpleField type="float" name="osm_id"></SimpleField>
+		<SimpleField type="string" name="operator"></SimpleField>
+		<SimpleField type="string" name="ref"></SimpleField>
+		<SimpleField type="string" name="highway"></SimpleField>
+		<SimpleField type="string" name="public_transport"></SimpleField>
+		<SimpleField type="string" name="bus"></SimpleField>
+		<SimpleField type="string" name="wheelchair"></SimpleField>
+		<SimpleField type="string" name="network"></SimpleField>
+		<SimpleField type="string" name="shelter"></SimpleField>
+		<SimpleField type="string" name="tactile_paving"></SimpleField>
+		<SimpleField type="string" name="bench"></SimpleField>
+	</Schema>
+	<Folder>
+		<name>stations</name>
+		<Placemark>
+			<name>Breese &amp; University (SB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5692115102</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">542</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4140148,43.0730825,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>University &amp; N Breese (WB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5692115104</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">692</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.414277,43.073517,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>University &amp; N Breese (EB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5692115103</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">133</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.413335,43.0733245,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Observatory &amp; Elm (WB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">433483074</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">2978</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4164225,43.0765629,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Elm &amp; Observatory (SB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5692115109</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">2064</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4160428,43.0761015,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Observatory &amp; Elm (EB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">433483073</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">2195</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.41622390000001,43.0764104,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Linden &amp; Babcock (EB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5692115106</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">2003</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.41297659999999,43.0750872,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Babcock &amp; Linden (NB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5692115105</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">47</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4126825,43.0747673,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Babcock &amp; Linden (SB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">439726515</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">298</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4128772,43.0753013,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Linden &amp; Babcock (WB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5692115107</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">532</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.41249000000001,43.0752462,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Observatory &amp; Babcock (WB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">439726517</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">2996</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4132571,43.0765308,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">4505435100</SimpleData>
+					<SimpleData name="public_transport">stop_position</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4130626,43.076437,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Observatory &amp; Babcock (EB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">439726516</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">2145</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4129554,43.07638,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Campus &amp; Babcock (EB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">434091082</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">809</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4111596,43.0732424,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">2726169136</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.41155190000001,43.0736327,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>University &amp; N Randall (WB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">465144353</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">160</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4094336,43.0735161,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>University &amp; N Orchard (WB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5691828124</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">178</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">yes</SimpleData>
+					<SimpleData name="tactile_paving">no</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4071009,43.0734843,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Linden &amp; Henry (WB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">461449911</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">184</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4105455,43.0752049,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Linden &amp; Henry (EB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">461449913</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">573</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4102772,43.0750935,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Linden &amp; N Charter (WB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5691828126</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">0488</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.40752809999999,43.075199,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Observatory &amp; Liz Waters (WB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5693407739</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">56</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4071531,43.0766157,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>N Charter &amp; W Johnson (SB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">711297002</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">490</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.40586070000001,43.072331,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>N Mills &amp; University (SB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5693553807</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">256</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4041833,43.0728786,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>N Mills &amp; University (NB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5693553808</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">773</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4040201,43.0730459,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>N Charter &amp; University (SB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">461449919</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">706</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">yes</SimpleData>
+					<SimpleData name="tactile_paving">no</SimpleData>
+					<SimpleData name="bench">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4063422,43.0739899,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>N Charter &amp; University (NB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5693407740</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">757</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4060657,43.0740515,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>University &amp; N Mills (WB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">711296998</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">234</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">no</SimpleData>
+					<SimpleData name="tactile_paving">no</SimpleData>
+					<SimpleData name="bench">no</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4038104,43.0734376,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>University &amp; N Park (WB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">711297042</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">100</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">yes</SimpleData>
+					<SimpleData name="tactile_paving">no</SimpleData>
+					<SimpleData name="bench">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4013789,43.0734013,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Linden &amp; N Charter (EB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5691828125</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">438</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.40635090000001,43.0749311,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">461449918</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.40642389999999,43.075147,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Observatory &amp; N Charter (WB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5691828127</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">52</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">yes</SimpleData>
+					<SimpleData name="tactile_paving">no</SimpleData>
+					<SimpleData name="bench">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4056566,43.0761222,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Observatory &amp; North Hall (EB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5693553809</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">53</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4039531,43.0758319,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Observatory &amp; Bascom (WB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5691828128</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">60</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4037002,43.075948,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>N Park &amp; University (SB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5693553768</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">538</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">yes</SimpleData>
+					<SimpleData name="tactile_paving">no</SimpleData>
+					<SimpleData name="bench">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4007924,43.0726716,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>N Park &amp; University (NB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">461449926</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">341</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">yes</SimpleData>
+					<SimpleData name="tactile_paving">no</SimpleData>
+					<SimpleData name="bench">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.40043319999999,43.073029,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>N Park &amp; Lathrop (SB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5693553769</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">70</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.40073839999999,43.0743133,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>N Park &amp; State (NB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">461449928</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">795</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.40052439999999,43.0745632,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Intercity Buses</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">711297038</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="shelter">no</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.39946519999999,43.0733828,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>N Lake &amp; W Johnson (SB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5693553772</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">68</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3975794,43.0722611,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>N Lake &amp; University (NB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5693553773</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">765</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">no</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.39732480000001,43.0730546,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>N Frances &amp; W Johnson (NB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5693553810</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">0969</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">no</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3957606,43.0722663,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>University &amp; N Frances (WB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5032748494</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">568</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">no</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3962329,43.0732578,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>University &amp; N Lake (WB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">4207940057</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">670</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">yes</SimpleData>
+					<SimpleData name="bench">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.39802760000001,43.0733293,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>N Lake &amp; State (SB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">4207936661</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">926</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">yes</SimpleData>
+					<SimpleData name="tactile_paving">no</SimpleData>
+					<SimpleData name="bench">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.39755150000001,43.073678,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">4207936662</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="shelter">no</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3973041,43.0743726,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Langdon &amp; N Park (WB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">711297032</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">10</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">no</SimpleData>
+					<SimpleData name="tactile_paving">no</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.40027259999999,43.075922,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Langdon &amp; N Park (EB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5693553770</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">99</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4000248,43.0757891,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">461488643</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4005317,43.0762537,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">1857746025</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="shelter">no</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.39769339999999,43.0758863,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>N Lake &amp; Langdon (NB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5691755223</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">49</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">no</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3972433,43.0756848,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>State &amp; N Lake (EB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">711297029</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">265</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">yes</SimpleData>
+					<SimpleData name="tactile_paving">no</SimpleData>
+					<SimpleData name="bench">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.39679460000001,43.0748392,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">4505435101</SimpleData>
+					<SimpleData name="public_transport">stop_position</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3968246,43.0749062,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">4207989793</SimpleData>
+					<SimpleData name="ref">0506</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="shelter">yes</SimpleData>
+					<SimpleData name="tactile_paving">no</SimpleData>
+					<SimpleData name="bench">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3958962,43.0749334,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Langdon &amp; N Lake (EB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5691755224</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">25</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">no</SimpleData>
+					<SimpleData name="tactile_paving">no</SimpleData>
+					<SimpleData name="bench">no</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.39695740000001,43.0757527,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>State &amp; N Frances (WB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5691788566</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">506</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">yes</SimpleData>
+					<SimpleData name="tactile_paving">no</SimpleData>
+					<SimpleData name="bench">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3954725,43.0749103,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>State &amp; W Gilman (EB)</name>
+			<visibility>0</visibility>
+			<ExtendedData>
+				<SchemaData schemaUrl="#stations">
+					<SimpleData name="osm_id">5691788567</SimpleData>
+					<SimpleData name="operator">Madison Metro</SimpleData>
+					<SimpleData name="ref">505</SimpleData>
+					<SimpleData name="highway">bus_stop</SimpleData>
+					<SimpleData name="public_transport">platform</SimpleData>
+					<SimpleData name="bus">yes</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="network">Madison Metro</SimpleData>
+					<SimpleData name="shelter">no</SimpleData>
+					<SimpleData name="tactile_paving">no</SimpleData>
+					<SimpleData name="bench">no</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3936841,43.0747883,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

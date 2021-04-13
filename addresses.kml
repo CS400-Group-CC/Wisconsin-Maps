@@ -1,0 +1,970 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>addresses.kml</name>
+	<Schema name="addresses" id="addresses">
+		<SimpleField type="float" name="osm_id"></SimpleField>
+		<SimpleField type="string" name="operator"></SimpleField>
+		<SimpleField type="string" name="addr:housenumber"></SimpleField>
+		<SimpleField type="string" name="tourism"></SimpleField>
+		<SimpleField type="string" name="amenity"></SimpleField>
+		<SimpleField type="string" name="office"></SimpleField>
+		<SimpleField type="string" name="brand"></SimpleField>
+		<SimpleField type="string" name="leisure"></SimpleField>
+		<SimpleField type="string" name="shop"></SimpleField>
+		<SimpleField type="string" name="sport"></SimpleField>
+		<SimpleField type="string" name="ref"></SimpleField>
+		<SimpleField type="string" name="religion"></SimpleField>
+		<SimpleField type="string" name="denomination"></SimpleField>
+		<SimpleField type="string" name="addr:city"></SimpleField>
+		<SimpleField type="string" name="opening_hours"></SimpleField>
+		<SimpleField type="string" name="wikipedia"></SimpleField>
+		<SimpleField type="string" name="phone"></SimpleField>
+		<SimpleField type="string" name="wikidata"></SimpleField>
+		<SimpleField type="string" name="addr:street"></SimpleField>
+		<SimpleField type="string" name="website"></SimpleField>
+		<SimpleField type="string" name="cuisine"></SimpleField>
+		<SimpleField type="string" name="addr:postcode"></SimpleField>
+		<SimpleField type="string" name="addr:unit"></SimpleField>
+		<SimpleField type="string" name="addr:state"></SimpleField>
+		<SimpleField type="string" name="brand:wikidata"></SimpleField>
+		<SimpleField type="string" name="brand:wikipedia"></SimpleField>
+		<SimpleField type="string" name="addr:country"></SimpleField>
+		<SimpleField type="string" name="beauty"></SimpleField>
+		<SimpleField type="string" name="wheelchair"></SimpleField>
+		<SimpleField type="string" name="email"></SimpleField>
+		<SimpleField type="string" name="capacity"></SimpleField>
+		<SimpleField type="string" name="network"></SimpleField>
+		<SimpleField type="string" name="smoking"></SimpleField>
+		<SimpleField type="string" name="toilets:wheelchair"></SimpleField>
+		<SimpleField type="string" name="healthcare"></SimpleField>
+		<SimpleField type="string" name="atm"></SimpleField>
+		<SimpleField type="string" name="alt_name"></SimpleField>
+		<SimpleField type="string" name="reservation"></SimpleField>
+		<SimpleField type="string" name="delivery"></SimpleField>
+		<SimpleField type="string" name="takeaway"></SimpleField>
+		<SimpleField type="string" name="payment:cash_app"></SimpleField>
+		<SimpleField type="string" name="payment:debit_cards"></SimpleField>
+		<SimpleField type="string" name="payment:cash"></SimpleField>
+		<SimpleField type="string" name="payment:credit_cards"></SimpleField>
+		<SimpleField type="string" name="payment:venmo"></SimpleField>
+		<SimpleField type="string" name="outdoor_seating"></SimpleField>
+		<SimpleField type="string" name="internet_access"></SimpleField>
+		<SimpleField type="string" name="payment:contactless"></SimpleField>
+	</Schema>
+	<Folder>
+		<name>addresses</name>
+		<Placemark>
+			<name>L.R. Ingersoll Physics Museum</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">3100613313</SimpleData>
+					<SimpleData name="operator">University of Wisconsin- Madison</SimpleData>
+					<SimpleData name="addr:housenumber">1150</SimpleData>
+					<SimpleData name="tourism">museum</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="opening_hours">Mo-Fr 08:00-16:00; PH off; SH off</SimpleData>
+					<SimpleData name="wikipedia">en:L. R. Ingersoll Physics Museum</SimpleData>
+					<SimpleData name="phone">+1-608-262-3898</SimpleData>
+					<SimpleData name="wikidata">Q18749057</SimpleData>
+					<SimpleData name="addr:street">University Avenue</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4054156,43.0736469,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Slow Food UW Student Cafe</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">2768622488</SimpleData>
+					<SimpleData name="addr:housenumber">1127</SimpleData>
+					<SimpleData name="amenity">cafe</SimpleData>
+					<SimpleData name="addr:street">University Avenue</SimpleData>
+					<SimpleData name="website">http://slowfooduw.com/</SimpleData>
+					<SimpleData name="cuisine">regional</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.40338490000001,43.0729329,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>University of Wisconsin System</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5797067841</SimpleData>
+					<SimpleData name="addr:housenumber">1220</SimpleData>
+					<SimpleData name="office">educational_institution</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="addr:street">Linden Drive</SimpleData>
+					<SimpleData name="addr:postcode">53706</SimpleData>
+					<SimpleData name="addr:unit">1720</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4066909,43.0756117,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Anytime Fitness</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5584566092</SimpleData>
+					<SimpleData name="addr:housenumber">301</SimpleData>
+					<SimpleData name="brand">Anytime Fitness</SimpleData>
+					<SimpleData name="leisure">fitness_centre</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="opening_hours">24/7</SimpleData>
+					<SimpleData name="addr:street">East Campus Mall</SimpleData>
+					<SimpleData name="addr:postcode">53715</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="brand:wikidata">Q4778364</SimpleData>
+					<SimpleData name="brand:wikipedia">en:Anytime Fitness</SimpleData>
+					<SimpleData name="addr:country">US</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3988825,43.072243,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>pitaya</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5584566090</SimpleData>
+					<SimpleData name="addr:housenumber">341</SimpleData>
+					<SimpleData name="shop">clothes</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="opening_hours">Mo-Sa 10:00-21:00; Su 11:00-19:00</SimpleData>
+					<SimpleData name="addr:street">East Campus Mall</SimpleData>
+					<SimpleData name="addr:postcode">53715</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="addr:country">US</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3989363,43.0725379,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Sun Tan City</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5584566091</SimpleData>
+					<SimpleData name="addr:housenumber">301</SimpleData>
+					<SimpleData name="shop">beauty</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="opening_hours">Mo-Th 08:00-23:00; Fr 08:00-21:00; Sa 08:00-20:00, 10:00-22:00</SimpleData>
+					<SimpleData name="addr:street">East Campus Mall</SimpleData>
+					<SimpleData name="addr:postcode">53715</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="addr:country">US</SimpleData>
+					<SimpleData name="beauty">tanning</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3988161,43.0722574,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Aveda Institute Madison</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">3983330160</SimpleData>
+					<SimpleData name="addr:housenumber">353</SimpleData>
+					<SimpleData name="shop">hairdresser</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="addr:street">East Campus Mall</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3989036,43.0726528,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Neroli Salon &amp; Spa</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5584566089</SimpleData>
+					<SimpleData name="addr:housenumber">353</SimpleData>
+					<SimpleData name="shop">beauty</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="opening_hours">Tu-Th 12:00-20:00; Fr-Sa 09:00-17:00</SimpleData>
+					<SimpleData name="addr:street">East Campus Mall</SimpleData>
+					<SimpleData name="addr:postcode">53715</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="addr:country">US</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.398895,43.072745,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Milio&apos;s Sandwiches</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5584566088</SimpleData>
+					<SimpleData name="addr:housenumber">377</SimpleData>
+					<SimpleData name="amenity">fast_food</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="opening_hours">Su-We 10:00-24:00; Th-Sa 10:00-03:00</SimpleData>
+					<SimpleData name="addr:street">East Campus Mall</SimpleData>
+					<SimpleData name="cuisine">sandwich</SimpleData>
+					<SimpleData name="addr:postcode">53703</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="addr:country">US</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3988919,43.0728421,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>U.S. Bank</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5584566087</SimpleData>
+					<SimpleData name="addr:housenumber">389</SimpleData>
+					<SimpleData name="amenity">bank</SimpleData>
+					<SimpleData name="brand">U.S. Bank</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="opening_hours">Mo-Fr 09:00-17:00</SimpleData>
+					<SimpleData name="addr:street">East Campus Mall</SimpleData>
+					<SimpleData name="addr:postcode">53715</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="brand:wikidata">Q739084</SimpleData>
+					<SimpleData name="brand:wikipedia">en:U.S. Bancorp</SimpleData>
+					<SimpleData name="addr:country">US</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3988901,43.0729417,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Coffee Bytes</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">2522840402</SimpleData>
+					<SimpleData name="addr:housenumber">799</SimpleData>
+					<SimpleData name="amenity">cafe</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="opening_hours">Mo-Th 06:30-21:30; Fr 06:30-19:15; Sa 07:00-19:00; Su 07:00-21:00</SimpleData>
+					<SimpleData name="addr:street">University Square</SimpleData>
+					<SimpleData name="website">http://coffeebytes.net/</SimpleData>
+					<SimpleData name="addr:postcode">53715</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="email">mail@coffeebytes.net</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3988887,43.0730129,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>University of Wisconsin - Madison Office of Admissions and Recruitment</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5529664773</SimpleData>
+					<SimpleData name="addr:housenumber">702</SimpleData>
+					<SimpleData name="office">educational_institution</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="addr:street">West Johnson Street</SimpleData>
+					<SimpleData name="addr:postcode">53715</SimpleData>
+					<SimpleData name="addr:unit">#1101</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="addr:country">US</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3977663,43.0722814,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Madison Cuisine</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5584566086</SimpleData>
+					<SimpleData name="addr:housenumber">785</SimpleData>
+					<SimpleData name="amenity">restaurant</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="opening_hours">Su-Sa 10:00-22:00</SimpleData>
+					<SimpleData name="phone">6089068888</SimpleData>
+					<SimpleData name="addr:street">University Avenue</SimpleData>
+					<SimpleData name="cuisine">chinese</SimpleData>
+					<SimpleData name="addr:postcode">53715</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="addr:country">US</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.398256,43.0730203,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Inner Fire Yoga</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5584566085</SimpleData>
+					<SimpleData name="addr:housenumber">773</SimpleData>
+					<SimpleData name="leisure">fitness_centre</SimpleData>
+					<SimpleData name="sport">yoga</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="opening_hours">Mo-Fr 05:30-20:00; Sa 06:30-16:00; Su 06:30-20:00</SimpleData>
+					<SimpleData name="phone">6082372770</SimpleData>
+					<SimpleData name="addr:street">University Avenue</SimpleData>
+					<SimpleData name="addr:postcode">53715</SimpleData>
+					<SimpleData name="addr:unit">209</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="addr:country">US</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.39790069999999,43.0730269,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>N. Lake St. @ University Ave.</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">3452015967</SimpleData>
+					<SimpleData name="operator">Madison BCycle</SimpleData>
+					<SimpleData name="addr:housenumber">381</SimpleData>
+					<SimpleData name="amenity">bicycle_rental</SimpleData>
+					<SimpleData name="ref">2128</SimpleData>
+					<SimpleData name="phone">+1-800-473-4767</SimpleData>
+					<SimpleData name="addr:street">North Lake Street</SimpleData>
+					<SimpleData name="website">https://madison.bcycle.com/</SimpleData>
+					<SimpleData name="capacity">16</SimpleData>
+					<SimpleData name="network">Madison BCycle</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.39727600000001,43.0729373,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>The Double U</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">4479808708</SimpleData>
+					<SimpleData name="addr:housenumber">620</SimpleData>
+					<SimpleData name="amenity">bar</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="phone">1-608-512-0341</SimpleData>
+					<SimpleData name="addr:street">University Avenue</SimpleData>
+					<SimpleData name="website">https://www.thedoubleubar.com/</SimpleData>
+					<SimpleData name="addr:postcode">53715</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="smoking">outside</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3967408,43.0734158,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Estacion Inka</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5584566084</SimpleData>
+					<SimpleData name="addr:housenumber">616</SimpleData>
+					<SimpleData name="amenity">restaurant</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="opening_hours">11:00-21:00</SimpleData>
+					<SimpleData name="phone">6084673010</SimpleData>
+					<SimpleData name="addr:street">University Avenue</SimpleData>
+					<SimpleData name="website">http://estacioninkamadison.com/</SimpleData>
+					<SimpleData name="cuisine">peruvian</SimpleData>
+					<SimpleData name="addr:postcode">53715</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="addr:country">US</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3965424,43.0733778,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Karaoke Kid</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">4479808709</SimpleData>
+					<SimpleData name="addr:housenumber">614</SimpleData>
+					<SimpleData name="amenity">bar</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="phone">1-608-294-1997</SimpleData>
+					<SimpleData name="addr:street">University Avenue</SimpleData>
+					<SimpleData name="addr:postcode">53715</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.39637569999999,43.0733731,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Sushi Express</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5584566083</SimpleData>
+					<SimpleData name="addr:housenumber">610</SimpleData>
+					<SimpleData name="amenity">restaurant</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="opening_hours">Mo-Th 11:00-22:00; Fr-Sa 11:00-23:00; Su 11:00-22:00</SimpleData>
+					<SimpleData name="phone">6084679688</SimpleData>
+					<SimpleData name="addr:street">University Avenue</SimpleData>
+					<SimpleData name="website">http://www.sushiexpresswi.com</SimpleData>
+					<SimpleData name="cuisine">sushi</SimpleData>
+					<SimpleData name="addr:postcode">53715</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="addr:country">US</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.39630510000001,43.0733711,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hair Forum</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5584566082</SimpleData>
+					<SimpleData name="addr:housenumber">606</SimpleData>
+					<SimpleData name="shop">hairdresser</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="opening_hours">Mo-Fr 10:00-20:00; Sa 10:00-17:00</SimpleData>
+					<SimpleData name="phone">6082551930</SimpleData>
+					<SimpleData name="addr:street">University Avenue</SimpleData>
+					<SimpleData name="website">https://www.hairforumhairshop.com/</SimpleData>
+					<SimpleData name="addr:postcode">53715</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="addr:country">US</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.39616820000001,43.0733673,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Crave Coffee</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5584566081</SimpleData>
+					<SimpleData name="addr:housenumber">604</SimpleData>
+					<SimpleData name="amenity">cafe</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="addr:street">University Avenue</SimpleData>
+					<SimpleData name="addr:postcode">53715</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="addr:country">US</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3960876,43.073365,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>State Cartographer&apos;s Office</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">3883450120</SimpleData>
+					<SimpleData name="addr:housenumber">550</SimpleData>
+					<SimpleData name="office">yes</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="addr:street">North Park Street</SimpleData>
+					<SimpleData name="addr:postcode">53706</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4010129,43.0756093,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Library Mall</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5696932225</SimpleData>
+					<SimpleData name="operator">Madison BCycle</SimpleData>
+					<SimpleData name="addr:housenumber">511</SimpleData>
+					<SimpleData name="amenity">bicycle_rental</SimpleData>
+					<SimpleData name="ref">3696</SimpleData>
+					<SimpleData name="phone">+1-800-473-4782</SimpleData>
+					<SimpleData name="addr:street">North Park Street</SimpleData>
+					<SimpleData name="website">https://madison.bcycle.com/</SimpleData>
+					<SimpleData name="capacity">11</SimpleData>
+					<SimpleData name="network">Madison BCycle</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.39955,43.07487,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Memorial Union</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">3452009375</SimpleData>
+					<SimpleData name="operator">Madison BCycle</SimpleData>
+					<SimpleData name="addr:housenumber">699</SimpleData>
+					<SimpleData name="amenity">bicycle_rental</SimpleData>
+					<SimpleData name="ref">1888</SimpleData>
+					<SimpleData name="phone">+1-800-473-4750</SimpleData>
+					<SimpleData name="addr:street">North Park Street</SimpleData>
+					<SimpleData name="website">https://madison.bcycle.com/</SimpleData>
+					<SimpleData name="capacity">13</SimpleData>
+					<SimpleData name="network">Madison BCycle</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.4006116,43.0770289,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>LGBT Campus Center</name>
+			<description>Red Gym Room 123</description>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">4405259879</SimpleData>
+					<SimpleData name="addr:housenumber">716</SimpleData>
+					<SimpleData name="amenity">community_centre</SimpleData>
+					<SimpleData name="addr:street">Langdon Street</SimpleData>
+					<SimpleData name="addr:unit">123</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="toilets:wheelchair">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3985138,43.0764686,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Calvary Lutheran Chapel</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">1182261192</SimpleData>
+					<SimpleData name="addr:housenumber">701</SimpleData>
+					<SimpleData name="amenity">place_of_worship</SimpleData>
+					<SimpleData name="religion">christian</SimpleData>
+					<SimpleData name="denomination">lutheran</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="phone">608-255-7214</SimpleData>
+					<SimpleData name="addr:street">State Street</SimpleData>
+					<SimpleData name="website">https://www.calvarymadison.org/</SimpleData>
+					<SimpleData name="addr:postcode">53703</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3976086,43.0747587,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>University Square Dental</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">6893811219</SimpleData>
+					<SimpleData name="addr:housenumber">517</SimpleData>
+					<SimpleData name="amenity">dentist</SimpleData>
+					<SimpleData name="addr:street">North Lake Street</SimpleData>
+					<SimpleData name="website">https://www.usquaredental.com/</SimpleData>
+					<SimpleData name="healthcare">dentist</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3971713,43.0754058,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Hawthorne Ct &amp; State Street</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">3452006984</SimpleData>
+					<SimpleData name="operator">Madison BCycle</SimpleData>
+					<SimpleData name="addr:housenumber">619</SimpleData>
+					<SimpleData name="amenity">bicycle_rental</SimpleData>
+					<SimpleData name="ref">1890</SimpleData>
+					<SimpleData name="phone">+1-800-473-4752</SimpleData>
+					<SimpleData name="addr:street">State Street</SimpleData>
+					<SimpleData name="website">https://madison.bcycle.com/</SimpleData>
+					<SimpleData name="capacity">11</SimpleData>
+					<SimpleData name="network">Madison BCycle</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.39661270000001,43.0747423,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Paul&apos;s Bookstore</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">3199321910</SimpleData>
+					<SimpleData name="addr:housenumber">670</SimpleData>
+					<SimpleData name="shop">books</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="addr:street">State St</SimpleData>
+					<SimpleData name="website">http://www.paulsbookstore.com</SimpleData>
+					<SimpleData name="addr:postcode">53703</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3969412,43.0750054,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>UW Credit Union</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">1720938192</SimpleData>
+					<SimpleData name="addr:housenumber">662</SimpleData>
+					<SimpleData name="amenity">bank</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="addr:street">State Street</SimpleData>
+					<SimpleData name="addr:postcode">53703</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="atm">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3968374,43.0750029,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>City Bar</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">4085791930</SimpleData>
+					<SimpleData name="addr:housenumber">636</SimpleData>
+					<SimpleData name="amenity">bar</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="addr:street">State Street</SimpleData>
+					<SimpleData name="addr:postcode">53703</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.39605469999999,43.0749843,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Langdon St. &amp; N. Lake St.</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">3451985336</SimpleData>
+					<SimpleData name="operator">Madison BCycle</SimpleData>
+					<SimpleData name="addr:housenumber">633</SimpleData>
+					<SimpleData name="amenity">bicycle_rental</SimpleData>
+					<SimpleData name="ref">2072</SimpleData>
+					<SimpleData name="phone">+1-800-473-4765</SimpleData>
+					<SimpleData name="addr:street">Langdon Street</SimpleData>
+					<SimpleData name="website">https://madison.bcycle.com/</SimpleData>
+					<SimpleData name="capacity">11</SimpleData>
+					<SimpleData name="network">Madison BCycle</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3969137,43.0757597,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Strings Ramen</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5557859111</SimpleData>
+					<SimpleData name="addr:housenumber">311</SimpleData>
+					<SimpleData name="amenity">restaurant</SimpleData>
+					<SimpleData name="opening_hours">Mo-Fr 17:00-22:00; Sa-Su 11:00-22:00; Mo-Th 17:00-22:00; Fr-Su 11:00-22:00</SimpleData>
+					<SimpleData name="phone">6086653837</SimpleData>
+					<SimpleData name="addr:street">North Frances Street</SimpleData>
+					<SimpleData name="website">https://strings-ramen-shop-madison.business.site/</SimpleData>
+					<SimpleData name="cuisine">asian;japanese;ramen</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3956609,43.0726484,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Dotty Dumpling&apos;s Dowry</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5557859109</SimpleData>
+					<SimpleData name="addr:housenumber">317</SimpleData>
+					<SimpleData name="amenity">restaurant</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="opening_hours">Su-Mo 11:00-22:00; Tu-Th 11:00-23:00; Fr-Sa 11:00-24:00</SimpleData>
+					<SimpleData name="phone">6082590000</SimpleData>
+					<SimpleData name="addr:street">North Frances Street</SimpleData>
+					<SimpleData name="website">http://www.dottydumplingsdowry.com/</SimpleData>
+					<SimpleData name="cuisine">burger;american</SimpleData>
+					<SimpleData name="addr:postcode">53703</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="addr:country">US</SimpleData>
+					<SimpleData name="alt_name">Dotty&apos;s</SimpleData>
+					<SimpleData name="reservation">no</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.39569280000001,43.0728214,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Ian&apos;s Pizza</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5557859108</SimpleData>
+					<SimpleData name="addr:housenumber">319</SimpleData>
+					<SimpleData name="amenity">restaurant</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="opening_hours">Mo-Sa 11:00-02:00; Su 11:00-22:00</SimpleData>
+					<SimpleData name="phone">6082579248</SimpleData>
+					<SimpleData name="addr:street">North Frances Street</SimpleData>
+					<SimpleData name="website">https://ianspizza.com/madison/</SimpleData>
+					<SimpleData name="cuisine">pizza</SimpleData>
+					<SimpleData name="addr:postcode">53703</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="addr:country">US</SimpleData>
+					<SimpleData name="delivery">yes</SimpleData>
+					<SimpleData name="takeaway">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.395692,43.0729056,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Poke It Up</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">8415475189</SimpleData>
+					<SimpleData name="addr:housenumber">540</SimpleData>
+					<SimpleData name="amenity">restaurant</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="addr:street">University Avenue</SimpleData>
+					<SimpleData name="website">https://www.pokeitup.com/</SimpleData>
+					<SimpleData name="cuisine">hawaiian</SimpleData>
+					<SimpleData name="addr:postcode">53703</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3956716,43.0734486,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Magico Barbershop</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">8429139211</SimpleData>
+					<SimpleData name="operator">Ibrahim</SimpleData>
+					<SimpleData name="addr:housenumber">447</SimpleData>
+					<SimpleData name="shop">hairdresser</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="opening_hours">Tuesday: 10am - 6pm Wednesday: 10am - 6pm Thursday: 10am - 7pm Friday: 9am - 6pm Saturday: 10am - 5pm Sunday: 11am - 4pm</SimpleData>
+					<SimpleData name="phone">608.949.4477</SimpleData>
+					<SimpleData name="addr:street">West Gilman Street</SimpleData>
+					<SimpleData name="addr:postcode">53703</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="payment:cash_app">yes</SimpleData>
+					<SimpleData name="payment:debit_cards">yes</SimpleData>
+					<SimpleData name="payment:cash">yes</SimpleData>
+					<SimpleData name="payment:credit_cards">yes</SimpleData>
+					<SimpleData name="payment:venmo">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3948927,43.0736849,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>University &amp; Bassett</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">5696998713</SimpleData>
+					<SimpleData name="operator">Madison BCycle</SimpleData>
+					<SimpleData name="addr:housenumber">504</SimpleData>
+					<SimpleData name="amenity">bicycle_rental</SimpleData>
+					<SimpleData name="ref">2146</SimpleData>
+					<SimpleData name="phone">+1-800-473-4769</SimpleData>
+					<SimpleData name="addr:street">University Avenue</SimpleData>
+					<SimpleData name="website">https://madison.bcycle.com/</SimpleData>
+					<SimpleData name="capacity">9</SimpleData>
+					<SimpleData name="network">Madison BCycle</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3942337,43.0732773,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Paul&apos;s Pel&apos;meni</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">3529434532</SimpleData>
+					<SimpleData name="addr:housenumber">414</SimpleData>
+					<SimpleData name="amenity">restaurant</SimpleData>
+					<SimpleData name="addr:street">West Gilman Street</SimpleData>
+					<SimpleData name="website">https://paulspelmenimadison.com/39592</SimpleData>
+					<SimpleData name="cuisine">russian</SimpleData>
+					<SimpleData name="smoking">no</SimpleData>
+					<SimpleData name="delivery">yes</SimpleData>
+					<SimpleData name="takeaway">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3941015,43.0745402,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Fugu Fusion</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">2522599269</SimpleData>
+					<SimpleData name="addr:housenumber">411</SimpleData>
+					<SimpleData name="amenity">restaurant</SimpleData>
+					<SimpleData name="phone">6082867277</SimpleData>
+					<SimpleData name="addr:street">West Gilman Street</SimpleData>
+					<SimpleData name="cuisine">asian</SimpleData>
+					<SimpleData name="addr:postcode">53703</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.39375389999999,43.0744822,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Colectivo</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">4085791928</SimpleData>
+					<SimpleData name="addr:housenumber">583</SimpleData>
+					<SimpleData name="amenity">cafe</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="addr:street">State Street</SimpleData>
+					<SimpleData name="website">https://colectivocoffee.com/</SimpleData>
+					<SimpleData name="cuisine">coffee_shop</SimpleData>
+					<SimpleData name="addr:postcode">53703</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+					<SimpleData name="toilets:wheelchair">yes</SimpleData>
+					<SimpleData name="outdoor_seating">yes</SimpleData>
+					<SimpleData name="internet_access">wlan</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3955747,43.0747584,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Mooyah</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">4085791929</SimpleData>
+					<SimpleData name="addr:housenumber">571</SimpleData>
+					<SimpleData name="amenity">fast_food</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="addr:street">State Street</SimpleData>
+					<SimpleData name="cuisine">burger</SimpleData>
+					<SimpleData name="addr:postcode">53703</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3952073,43.0747525,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Fjällräven</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">4085791927</SimpleData>
+					<SimpleData name="addr:housenumber">559</SimpleData>
+					<SimpleData name="shop">outdoor</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="addr:street">State Street</SimpleData>
+					<SimpleData name="website">https://www.fjallraven.com/us/en-us/</SimpleData>
+					<SimpleData name="addr:postcode">53703</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3950517,43.07475,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Naf Naf Grill</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">4085791926</SimpleData>
+					<SimpleData name="addr:housenumber">555</SimpleData>
+					<SimpleData name="amenity">restaurant</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="addr:street">State Street</SimpleData>
+					<SimpleData name="cuisine">mediterranean</SimpleData>
+					<SimpleData name="addr:postcode">53703</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3948551,43.0747468,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>European Wax Center</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">4085791925</SimpleData>
+					<SimpleData name="addr:housenumber">551</SimpleData>
+					<SimpleData name="brand">European Wax Center</SimpleData>
+					<SimpleData name="shop">beauty</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="addr:street">State Street</SimpleData>
+					<SimpleData name="addr:postcode">53703</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="brand:wikidata">Q5413426</SimpleData>
+					<SimpleData name="brand:wikipedia">en:European Wax Center</SimpleData>
+					<SimpleData name="beauty">waxing</SimpleData>
+					<SimpleData name="wheelchair">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.39465180000001,43.0747435,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>MacTaggart&apos;s Market</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="#addresses">
+					<SimpleData name="osm_id">2522840401</SimpleData>
+					<SimpleData name="addr:housenumber">230</SimpleData>
+					<SimpleData name="shop">convenience</SimpleData>
+					<SimpleData name="addr:city">Madison</SimpleData>
+					<SimpleData name="opening_hours">Mo-Th 07:00-24:00; Fr 07:00-03:00; Sa 08:00-03:00; Su 08:00-24:00</SimpleData>
+					<SimpleData name="phone">1-608-251-0911</SimpleData>
+					<SimpleData name="addr:street">West Lakelawn Place</SimpleData>
+					<SimpleData name="website">http://mactaggartsmarket.com/</SimpleData>
+					<SimpleData name="addr:postcode">53703</SimpleData>
+					<SimpleData name="addr:state">WI</SimpleData>
+					<SimpleData name="atm">yes</SimpleData>
+					<SimpleData name="alt_name">Tagg&apos;s</SimpleData>
+					<SimpleData name="payment:debit_cards">yes</SimpleData>
+					<SimpleData name="payment:cash">yes</SimpleData>
+					<SimpleData name="payment:credit_cards">yes</SimpleData>
+					<SimpleData name="payment:contactless">yes</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Point>
+				<coordinates>-89.3939129,43.0765361,0</coordinates>
+			</Point>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>
