@@ -21,9 +21,11 @@ public class Frontend {
     private Scanner scnr;
     private String mode;
 
-    private String[] files = {"data.csv"};
+    private String[] files = {"MapData.csv"};
     private MadisonMapperReader reader = new MadisonMapperReader(files);
-    private List<BuildingInterface> buildings = reader.getBuildings();
+    private MadisonMapperReader secondReader = new MadisonMapperReader(files);
+    private List<BuildingInterface> allBuildings = reader.getBuildings();
+    private List<BuildingInterface> buildings = secondReader.getBuildings();
 
     public static void main(String[] args) throws DataFormatException, FileNotFoundException {
         Frontend frontend = new Frontend();
@@ -32,6 +34,7 @@ public class Frontend {
 
     public Frontend() throws DataFormatException, FileNotFoundException {
         this.mode = "base";
+        this.buildings.removeIf(building -> building.getTypes().contains("P"));
     }
 
     public void run() throws DataFormatException, FileNotFoundException {
@@ -88,7 +91,7 @@ public class Frontend {
             System.out.println("|          Settings         |");
             System.out.println("-----------------------------\n");
             settings();
-        } else if (command.equals("s")) {
+        } else if (command.equals("b")) {
                 System.out.println("-----------------------------");
                 System.out.println("|       List Buildings      |");
                 System.out.println("-----------------------------\n");
@@ -234,9 +237,11 @@ public class Frontend {
      * Print's all the buildings and their types in the Data Set to the console
      */
     private void printBuildings() {
+
         System.out.println("The List of Buildings at UW-Madison: ");
         for (BuildingInterface building : buildings) {
-            System.out.println(building.getName() + " | " + Arrays.toString(building.getTypes()));
+            System.out.println(building.getName() + " | " + building.getTypes());
         }
+        System.out.println("");
     }
 }
