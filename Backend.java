@@ -24,7 +24,7 @@ import java.util.zip.DataFormatException;
 public class Backend implements BackendInterface {
   
   CS400Graph<BuildingInterface> graph;
-  MapperReader dataReader;
+  MadisonMapperReader dataReader;
   double travelSpeed, conditionMultiplier;
   
   /**
@@ -33,7 +33,7 @@ public class Backend implements BackendInterface {
    * @param dataReader the MapperReader object that has read the dataset
    * @throws DataFormatException if some aspect of the data cannot be placed into the graph
    */
-  public Backend (MapperReader dataReader) throws DataFormatException {
+  public Backend (MadisonMapperReader dataReader) throws DataFormatException {
     this.dataReader = dataReader;
     this.graph = new CS400Graph<BuildingInterface>();
     
@@ -68,7 +68,7 @@ public class Backend implements BackendInterface {
   }
 
   public Backend (Scanner input) throws DataFormatException {
-    dataReader = new MapperReader(input);
+    dataReader = new MadisonMapperReader(input);
     this.graph = new CS400Graph<BuildingInterface>();
     
     List<BuildingInterface> buildings = dataReader.getBuildings();
@@ -103,7 +103,7 @@ public class Backend implements BackendInterface {
 
   public Backend (String[] args) throws DataFormatException {
     try {
-      dataReader = new MapperReader(args);
+      dataReader = new MadisonMapperReader(args);
     } catch (FileNotFoundException badFile) {
       throw new DataFormatException("Input file was not found.");
     }
