@@ -168,7 +168,7 @@ public class DataInterpreter {
     allPoints.addAll(buildings);
     allPoints.addAll(addresses);
     allPoints.addAll(stations);
-    allPoints.addAll(roads);    
+    allPoints.addAll(roads);
 
     // Connecting points
     for (int i = 0; i < allPoints.size(); i++) {
@@ -195,47 +195,61 @@ public class DataInterpreter {
                 iPoint.addConnectedPoint(jPoint);
               }
             }
+            if (iPoint.types.contains("0") ^ jPoint.types.contains("0")) {
+              // Connect points if they are within 15 feet of one another, this ensures that all bus
+              // stops connect to at least one path
+              if (iPoint.getDistance(jPoint) * 5280 < 50) {
+                iPoint.addConnectedPoint(jPoint);
+              }
+            }
           }
         }
       }
     }
-    System.out.println("Number of Buildings: " + buildings.size());
-    System.out.println("Number of Addresses: " + addresses.size());
-    System.out.println("Number of Paths Points: " + roads.size());
-    System.out.println("Number of Stations: " + stations.size());
-//    for (int i = 0; i < buildings.size(); i++) {
-//      System.out.println("Building: " + buildings.get(i).name);
-//      System.out.println("Types: " + buildings.get(i).types);
-//      System.out.print("Connected points: ");
-//      for (int j = 0; j < buildings.get(i).connectedPoints.size(); j++) {
-//        System.out.print(buildings.get(i).connectedPoints.get(j).name + " ");
-//      }
-//      System.out.println("\n");
-//    }
-//    for (int i = 0; i < addresses.size(); i++) {
-//      System.out.println("Address: " + addresses.get(i).name);
-//      System.out.println("Types: " + addresses.get(i).types);
-//      System.out.print("Connected points: ");
-//      for (int j = 0; j < addresses.get(i).connectedPoints.size(); j++) {
-//        System.out.print(addresses.get(i).connectedPoints.get(j).name + " ");
-//      }
-//      System.out.println("\n");
-//    }
+//    System.out.println("Number of Buildings: " + buildings.size());
+//    System.out.println("Number of Addresses: " + addresses.size());
+//    System.out.println("Number of Paths Points: " + roads.size());
+//    System.out.println("Number of Stations: " + stations.size());
 //    for (int i = 0; i < stations.size(); i++) {
-//      System.out.println("Station: " + stations.get(i).name);
-//      System.out.println("Types: " + stations.get(i).types);
-//      System.out.print("Connected points: ");
-//      for (int j = 0; j < stations.get(i).connectedPoints.size(); j++) {
-//        System.out.print(stations.get(i).connectedPoints.get(j).name + " ");
+//      if (stations.get(i).connectedPoints.size() == 0) {
+//        System.out.println(stations.get(i).name + " cannot be reached.");
 //      }
-//      System.out.println("\n");
 //    }
+    // for (int i = 0; i < buildings.size(); i++) {
+    // System.out.println("Building: " + buildings.get(i).name);
+    // System.out.println("Types: " + buildings.get(i).types);
+    // System.out.print("Connected points: ");
+    // for (int j = 0; j < buildings.get(i).connectedPoints.size(); j++) {
+    // System.out.print(buildings.get(i).connectedPoints.get(j).name + " ");
+    // }
+    // System.out.println("\n");
+    // }
+    // for (int i = 0; i < addresses.size(); i++) {
+    // System.out.println("Address: " + addresses.get(i).name);
+    // System.out.println("Types: " + addresses.get(i).types);
+    // System.out.print("Connected points: ");
+    // for (int j = 0; j < addresses.get(i).connectedPoints.size(); j++) {
+    // System.out.print(addresses.get(i).connectedPoints.get(j).name + " ");
+    // }
+    // System.out.println("\n");
+    // }
+    // for (int i = 0; i < stations.size(); i++) {
+    // System.out.println("Station: " + stations.get(i).name);
+    // System.out.println("Types: " + stations.get(i).types);
+    // System.out.print("Connected points: ");
+    // for (int j = 0; j < stations.get(i).connectedPoints.size(); j++) {
+    // System.out.print(stations.get(i).connectedPoints.get(j).name + " ");
+    // }
+    // System.out.println("\n");
+    // }
 
     // System.out.println(buildings);
     // System.out.println(addresses);
+    
+    
     FileWriter fileWriter = null;
     try {
-      fileWriter = new FileWriter("output.csv");
+      fileWriter = new FileWriter("output2.csv");
     } catch (IOException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
@@ -243,7 +257,8 @@ public class DataInterpreter {
     PrintWriter printWriter = new PrintWriter(fileWriter);
     printWriter.println("Building Name,Building Type,Latitude,Longitude,Connected Nodes");
     for (int i = 0; i < allPoints.size(); i++) {
-      printWriter.print(allPoints.get(i).name + "," + allPoints.get(i).types + "," + allPoints.get(i).lat + "," + allPoints.get(i).lon + ",");
+      printWriter.print(allPoints.get(i).name + "," + allPoints.get(i).types + ","
+          + allPoints.get(i).lat + "," + allPoints.get(i).lon + ",");
       for (int j = 0; j < allPoints.get(i).connectedPoints.size(); j++) {
         printWriter.print(allPoints.get(i).connectedPoints.get(j).name);
         if (j < allPoints.get(i).connectedPoints.size() - 1) {
@@ -308,11 +323,41 @@ public class DataInterpreter {
     // System.out.println("Matcher created");
     // int count = 0;
     while (matcher.find()) {
-      output.add(constructBuilding(matcher.group(1), matcher.group(5)));
+      output.add(constructStation(matcher.group(1), matcher.group(5)));
       // count++;
     }
     // System.out.println(count);
     return output;
+  }
+
+  private static Point constructStation(String name, String coords) {
+    String types = "0;";
+
+    // Fixing errors in names
+    if (name.contains("&amp;")) {
+      name = name.replace("&amp;", "&");
+    }
+    if (name.contains("&apos;")) {
+      name = name.replace("&apos;", "'");
+    }
+
+    double lat = 0;
+    double lon = 0;
+    int count = 0;
+    Scanner input = new Scanner(coords);
+    input.useDelimiter(" ");
+    while (input.hasNext()) {
+      double[] currentPoint = getCoords(input.next());
+      lat += currentPoint[1];
+      lon += currentPoint[0];
+      count++;
+    }
+    input.close();
+    if (count != 0) {
+      lat /= count;
+      lon /= count;
+    }
+    return new Point(name, lat, lon, types);
   }
 
   public static List<Point> generateAddresses() {
