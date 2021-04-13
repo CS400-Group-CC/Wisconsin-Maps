@@ -8,40 +8,67 @@
 // Notes to Grader: None
 
 import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import java.util.ArrayList;
 import java.util.zip.DataFormatException;
 
+/**
+ * This class controls the frontend of the Wisconsin Maps program. It displays all appropriate
+ * menus, and when requested, calls the backend methods and displays the results.
+ *
+ * @author Will Langas
+ */
 public class Frontend {
 
     private Backend backend;
     private Scanner scnr;
     private String mode;
 
+    // Need to read through the data twice so we can filter through the buildings in one list and
+    // remove paths
     private String[] files = {"MapData.csv"};
     private MadisonMapperReader reader = new MadisonMapperReader(files);
     private MadisonMapperReader secondReader = new MadisonMapperReader(files);
     private List<BuildingInterface> allBuildings = reader.getBuildings();
     private List<BuildingInterface> buildings = secondReader.getBuildings();
 
+    /**
+     * The main method for this class simply calls Frontend.run(), which controls the flow of the
+     * program.
+     *
+     * @param args No arguments are passed here
+     * @throws DataFormatException Passed by the data reader if the csv is not correctly formatted
+     * @throws FileNotFoundException This is passed by the data reader if the file is not found
+     */
     public static void main(String[] args) throws DataFormatException, FileNotFoundException {
         Frontend frontend = new Frontend();
         frontend.run();
     }
 
+    /**
+     * The default constructor for the Frontend, it simply filters out edges from the classes list
+     * of buildings.
+     *
+     * @throws DataFormatException Passed by the data reader if the csv is not correctly formatted
+     * @throws FileNotFoundException This is passed by the data reader if the file is not found
+     */
     public Frontend() throws DataFormatException, FileNotFoundException {
         this.mode = "base";
-        this.buildings.removeIf(building -> building.getTypes().contains("P"));
+        this.buildings.removeIf(building -> building.getTypes().contains("P")); // Filter out edges
     }
 
+    /**
+     * The run() method is what controls the overall flow of the program, and when requested, exits
+     * the program.
+     *
+     * @throws DataFormatException Passed by the data reader if the csv is not correctly formatted
+     * @throws FileNotFoundException This is passed by the data reader if the file is not found
+     */
     public void run() throws DataFormatException, FileNotFoundException {
         boolean noError = true;
 
         System.out.println("-----------------------------");
-        System.out.println("| Welcome to Wisconsin Maps |");
+        System.out.println("| Welcome to Wisconsin Maps |"); // Welcome screen
         System.out.println("-----------------------------\n");
 
         try {
@@ -73,6 +100,10 @@ public class Frontend {
      *       -----------------------------
      */
 
+    /**
+     * The "home" menu for the program, it houses the three main functionality menus of the program,
+     * and helps navigate the user between them.
+     */
     private void baseMode() {
         System.out.println("Please select one of the following options and hit enter:");
         System.out.println("-d Distance Screen");
@@ -112,7 +143,7 @@ public class Frontend {
 
     /**
      * The main distance screen which holds the options for walking time, listing buildings passed,
-     * and getting the distance to a category of locations
+     * and getting the distance to a category of locations.
      */
     private void distance() {
         System.out.println("Please select one of the following options then hit enter");
@@ -149,18 +180,20 @@ public class Frontend {
     }
 
     /**
-     * Find the walking time between two buildings
+     * This method walks the user through the process of finding the walking time between two
+     * buildings.
      */
     private void walkingTime() {
-        List<BuildingInterface> buildings = reader.getBuildings();
+        //List<BuildingInterface> buildings = reader.getBuildings();
 
         System.out.println("Enter the starting building, or x to exit the list screen: ");
-        String startBuilding = scnr.nextLine();
-        if (startBuilding.equals("x")) distance();
+        String startBuilding = scnr.nextLine(); // Grab input
+        if (startBuilding.equals("x")) distance(); // Exit if needed
         BuildingInterface start = findByName(startBuilding);
         System.out.println("You chose: " + start.getName() + " | " + start.getTypes());
         System.out.println("");
 
+        // Repeat the above but for the end building
         System.out.println("Enter the ending building, or x to exit the list screen: ");
         String endBuilding = scnr.nextLine();
         if (endBuilding.equals("x")) distance();
@@ -177,7 +210,8 @@ public class Frontend {
     }
 
     /**
-     * List the buildings that would be passed on a certain path
+     * This method walks the user through the process of listing the buildings that would be passed
+     * when walking between two buildings.
      */
     private void listBuildings() {
         System.out.println("Enter the starting building, or x to exit the list screen: ");
@@ -195,7 +229,10 @@ public class Frontend {
 
         System.out.println("Enter the ending building, or x to exit the list screen: ");
         String endBuilding = scnr.nextLine();
-        if (endBuilding.equals("x")) distance();
+        if (endBuilding.equals("x")) {
+            System.out.println("");
+            distance();
+        }
         BuildingInterface end = findByName(endBuilding);
 
         if (end == null) {
@@ -206,6 +243,7 @@ public class Frontend {
         System.out.println("You chose: " + end.getName() + " | " + end.getTypes());
         System.out.println("");
 
+        // Grab the list of buildings passed and print them out
         List<BuildingInterface> results = backend.getAlongPath(start, end);
         System.out.println("When traveling from " + start.getName() + " to " + end.getName() + ", "
             + "you will pass the following buildings: ");
@@ -216,7 +254,8 @@ public class Frontend {
     }
 
     /**
-     * Find distance to a category of locations using a category identifier
+     * This method walks the user through the process of finding the nearest building of a certain
+     * type and displaying how many minutes away that building is.
      */
     private void category() {
 
@@ -228,6 +267,7 @@ public class Frontend {
             category();
         }
 
+        // Enter the one character identifier
         System.out.println("\nEnter the category identifier: ");
         char ident = scnr.next().charAt(0);
         if (ident == 'x') {
@@ -250,6 +290,10 @@ public class Frontend {
         }
     }
 
+    /**
+     * This method walks the user through the process of finding the nearest building of a certain
+     * type and displaying which buildings are passed on the way to that nearest building.
+     */
     private void categoryPath() {
 
         System.out.println("\nEnter your starting building: ");
@@ -291,6 +335,9 @@ public class Frontend {
         }
     }
 
+    /**
+     * This method prints all the building type identifiers
+     */
     private void printIdents() {
         // Print the category identifiers
         String[] identifiers = {"R - Residential", "E - Educational", "F - Fitness", "D - Dining",
@@ -303,9 +350,15 @@ public class Frontend {
         }
     }
 
+    /**
+     * This method finds and returns a building using it's String name to find it.
+     *
+     * @param name A string representation of a building
+     * @return building A BuildingInterface object of that building
+     */
     private BuildingInterface findByName(String name) {
         for (BuildingInterface building : this.buildings) {
-            if (building.getName().equals(name)) {
+            if (building.getName().equals(name)) { // Search through buildings for a match
                 return building;
             }
         }
@@ -330,7 +383,7 @@ public class Frontend {
         if (command.equals("ts")) {
             System.out.println("Enter your travel speed (In Feet Per Second): ");
             double speed = scnr.nextDouble();
-            backend.setTravelSpeed(speed);
+            backend.setTravelSpeed(speed); // Set the speed
             System.out.println("Travel Speed set successfully\n");
             scnr.nextLine();
             baseMode();
@@ -338,9 +391,12 @@ public class Frontend {
             System.out.println("Enter a multiplier based on the conditions (Ex: Snow might make a"
                 + "path take 2x as long, so enter 2.0): ");
             double multiplier = scnr.nextDouble();
-            backend.setTravelConditions(multiplier);
+            backend.setTravelConditions(multiplier); // Set the conditions
             System.out.println("Travel Conditions set successfully\n");
             scnr.nextLine();
+            baseMode();
+        } else if (command.equals("x")) {
+            System.out.println("");
             baseMode();
         } else {
             System.out.println("Unrecognized Option, please try again");
@@ -356,7 +412,7 @@ public class Frontend {
      */
 
     /**
-     * Print's all the buildings and their types in the Data Set to the console
+     * Print's all the buildings and their types in the Data Set to the console.
      */
     private void printBuildings() {
         System.out.println("The List of Buildings at UW-Madison: ");
