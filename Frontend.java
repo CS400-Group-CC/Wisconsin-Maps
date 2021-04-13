@@ -46,7 +46,7 @@ public class Frontend {
 
         try {
             backend = new Backend(reader);
-
+            buildings = backend.getBuildings();
         } catch (DataFormatException d) {
             System.out.println("Data format issue.");
             noError = false;
@@ -118,17 +118,29 @@ public class Frontend {
         System.out.println("Please select one of the following options then hit enter");
         System.out.println("-w Estimate Walking Time Between Two Buildings");
         System.out.println("-b List the Buildings Passed on the Path Between Two Buildings");
-        System.out.println("-c Get the Distance to a Category of Locations");
+        System.out.println("-c Find the Walking Time to The Closest Building of a Certain Type");
+        System.out.println("-p Find the Path to The Closest Building of a Certain Type");
         System.out.println("-x Go Back to Home Screen");
 
         String command = scnr.nextLine();
         if (command.equals("w")) {
+            System.out.println("");
             walkingTime();
         } else if (command.equals("b")) {
+            System.out.println("");
             listBuildings();
         } else if (command.equals("c")) {
+            System.out.println("");
+            printIdents();
+            System.out.println("");
             category();
+        } else if (command.equals("p")) {
+            System.out.println("");
+            printIdents();
+            System.out.println("");
+            categoryPath();
         } else if (command.equals("x")) {
+            System.out.println("");
             baseMode();
         } else {
             System.out.println("Unrecognized Option, please try again");
@@ -145,12 +157,23 @@ public class Frontend {
         System.out.println("Enter the starting building, or x to exit the list screen: ");
         String startBuilding = scnr.nextLine();
         if (startBuilding.equals("x")) distance();
+        BuildingInterface start = findByName(startBuilding);
+        System.out.println("You chose: " + start.getName() + " | " + start.getTypes());
+        System.out.println("");
 
         System.out.println("Enter the ending building, or x to exit the list screen: ");
         String endBuilding = scnr.nextLine();
         if (endBuilding.equals("x")) distance();
+        BuildingInterface end = findByName(endBuilding);
+        System.out.println("You chose: " + end.getName() + " | " + end.getTypes());
+        System.out.println("");
 
         // Find and print the walking time in between them
+        double time = backend.getPathTime(start, end);
+        int timeMins = (int) time;
+        int timeSecs = (int) Math.round(60 * (time - timeMins));
+        System.out.println("Expected time for path is " + timeMins + ":" + timeSecs);
+        System.out.println("");
     }
 
     /**
@@ -160,41 +183,132 @@ public class Frontend {
         System.out.println("Enter the starting building, or x to exit the list screen: ");
         String startBuilding = scnr.nextLine();
         if (startBuilding.equals("x")) distance();
+        BuildingInterface start = findByName(startBuilding);
 
-        // TODO: FIND THE BUILDING OBJECT
+        if (start == null) {
+            System.out.println("Building not found, please start this step over");
+            listBuildings();
+        }
+
+        System.out.println("You chose: " + start.getName() + " | " + start.getTypes());
+        System.out.println("");
 
         System.out.println("Enter the ending building, or x to exit the list screen: ");
         String endBuilding = scnr.nextLine();
         if (endBuilding.equals("x")) distance();
+        BuildingInterface end = findByName(endBuilding);
 
-        // TODO: FIND THE BUILDING OBJECT
+        if (end == null) {
+            System.out.println("Building not found, please start this step over");
+            listBuildings();
+        }
 
-        // TODO: FIND THE LIST OF BUILDINGS ON THE PATH AND PRINT THEM
+        System.out.println("You chose: " + end.getName() + " | " + end.getTypes());
+        System.out.println("");
 
+        List<BuildingInterface> results = backend.getAlongPath(start, end);
+        System.out.println("When traveling from " + start.getName() + " to " + end.getName() + ", "
+            + "you will pass the following buildings: ");
+        for (int i = 0; i < results.size(); ++i) {
+            System.out.println((i+1) + ". " + results.get(i).getName());
+        }
+        System.out.println("");
     }
 
     /**
      * Find distance to a category of locations using a category identifier
      */
     private void category() {
+
+        System.out.println("\nEnter your starting building: ");
+        String startBuilding = scnr.nextLine().trim();
+        BuildingInterface start = findByName(startBuilding);
+        if (start == null) {
+            System.out.println("Building not found, please start this step over");
+            category();
+        }
+
+        System.out.println("\nEnter the category identifier: ");
+        char ident = scnr.next().charAt(0);
+        if (ident == 'x') {
+            System.out.println("");
+            distance();
+        } else {
+            try {
+                System.out.println("Searching now...");
+                double time = backend.getGeneralPathTime(start, ident);
+                int timeMins = (int) time;
+                int timeSecs = (int) Math.round(60 * (time - timeMins));
+                System.out.print(
+                    "The closest building of type " + ident + " is " + timeMins + ":" + timeSecs + " away\n");
+            } catch (Exception e) {
+                System.out.println("Invalid identifier, or no buildings could be found, please"
+                    + " try again\n");
+                category();
+            }
+        }
+    }
+
+    private void categoryPath() {
+
+        System.out.println("\nEnter your starting building: ");
+        String startBuilding = scnr.nextLine().trim();
+        BuildingInterface start = findByName(startBuilding);
+        if (start == null) {
+            System.out.println("Building not found, please start this step over");
+            categoryPath();
+        }
+
+        System.out.println("\nEnter the category identifier: ");
+        char ident = scnr.next().charAt(0);
+        if (ident == 'x') {
+            System.out.println("");
+            distance();
+        } else {
+            if (ident == start.getTypes().charAt(0)) {
+                System.out.println("Start building identifier and selected identifier can not be "
+                    + "the same. Please restart this step");
+                categoryPath();
+            }
+            try {
+               System.out.println("Searching now...");
+               List<BuildingInterface> resultPath = backend.getAlongGeneralPath(start, ident);
+
+               System.out.println("The shortest path from " + startBuilding + " to a building of type"
+                   + " " + ident + " passes the following buildings: ");
+                for (int i = 0; i < resultPath.size(); ++i) {
+                    System.out.println((i+1) + ". " + resultPath.get(i).getName());
+                }
+                System.out.println("");
+                scnr.nextLine();
+                distance();
+            } catch (Exception e) {
+                System.out.println("Invalid identifier, or no buildings could be found, please"
+                    + " try again\n");
+                categoryPath();
+            }
+        }
+    }
+
+    private void printIdents() {
         // Print the category identifiers
         String[] identifiers = {"R - Residential", "E - Educational", "F - Fitness", "D - Dining",
-            "T - Shopping", "S -Student Life", "L - Library", "A - Athletics", "M - Entertainment",
+            "T - Shopping", "S - Student Life", "L - Library", "A - Athletics", "M - Entertainment",
             "P - Path", "K - Parking"};
 
         System.out.println("The building identifiers are as follows: ");
-        for (int i = 0; i < identifiers.length; ++i) {
-            System.out.println(identifiers[i]);
+        for (String identifier : identifiers) {
+            System.out.println(identifier);
         }
+    }
 
-        System.out.println("\nEnter an identifier, or x to exit the category function: ");
-        String ident = scnr.nextLine().trim().toLowerCase(); // TODO: Grab the identifier
-
-        if (ident.equals("x")) {
-            distance();
-        } else {
-            // TODO: PRINT ALL THE BUILDINGS WITH THE IDENTIFIER
+    private BuildingInterface findByName(String name) {
+        for (BuildingInterface building : this.buildings) {
+            if (building.getName().equals(name)) {
+                return building;
+            }
         }
+        return null;
     }
 
     /*
@@ -216,13 +330,20 @@ public class Frontend {
             System.out.println("Enter your travel speed (In Feet Per Second): ");
             double speed = scnr.nextDouble();
             backend.setTravelSpeed(speed);
+            System.out.println("Travel Speed set successfully\n");
+            scnr.nextLine();
+            baseMode();
         } else if (command.equals("tc")) {
             System.out.println("Enter a multiplier based on the conditions (Ex: Snow might make a"
                 + "path take 2x as long, so enter 2.0): ");
             double multiplier = scnr.nextDouble();
             backend.setTravelConditions(multiplier);
+            System.out.println("Travel Conditions set successfully\n");
+            scnr.nextLine();
+            baseMode();
         } else {
             System.out.println("Unrecognized Option, please try again");
+            System.out.println("");
             settings();
         }
     }
@@ -237,7 +358,6 @@ public class Frontend {
      * Print's all the buildings and their types in the Data Set to the console
      */
     private void printBuildings() {
-
         System.out.println("The List of Buildings at UW-Madison: ");
         for (BuildingInterface building : buildings) {
             System.out.println(building.getName() + " | " + building.getTypes());
