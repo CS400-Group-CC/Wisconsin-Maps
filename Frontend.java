@@ -26,7 +26,7 @@ public class Frontend {
 
     // Need to read through the data twice so we can filter through the buildings in one list and
     // remove paths
-    private String[] files = {"MapData.csv"};
+    private String[] files = {"Dataset.csv"};
     private MadisonMapperReader reader = new MadisonMapperReader(files);
     private MadisonMapperReader secondReader = new MadisonMapperReader(files);
     private List<BuildingInterface> allBuildings = reader.getBuildings();
@@ -206,7 +206,7 @@ public class Frontend {
         double time = backend.getPathTime(start, end);
         int timeMins = (int) time;
         int timeSecs = (int) Math.round(60 * (time - timeMins));
-        System.out.println("Expected time for path is " + timeMins + ":" + timeSecs);
+        System.out.printf("Expected time for path is %d:%02d", timeMins, timeSecs);
         System.out.println("");
     }
 
@@ -341,9 +341,11 @@ public class Frontend {
      */
     private void printIdents() {
         // Print the category identifiers
-        String[] identifiers = {"R - Residential", "E - Educational", "F - Fitness", "D - Dining",
-            "T - Shopping", "S - Student Life", "L - Library", "A - Athletics", "M - Entertainment",
-            "P - Path", "K - Parking"};
+        String[] identifiers = {"B - Building","K - Parking","L - Library","D - Dorm","H - Housing",
+            "F - Food hall","R - Restaurant","E - Education","S - Shopping","A - Athletics","O - Outdoor",
+            "M - Museum","X - Infrastructure/Service/Admin","T - Religious","0 - Bus stop",
+            "1 - Northbound bus stop","2 - Southbound bus stop","3 - Eastbound bus stop",
+            "4 - Westbound bus stop"};
 
         System.out.println("The building identifiers are as follows: ");
         for (String identifier : identifiers) {
@@ -418,7 +420,7 @@ public class Frontend {
     private void printBuildings() {
         System.out.println("The List of Buildings at UW-Madison: ");
         for (BuildingInterface building : buildings) {
-            if (!building.getTypes().contains("P")) {
+            if (!building.getTypes().contains("P") && !building.getTypes().contains("0")) {
                 System.out.println(building.getName() + " | " + building.getTypes());
             }
         }
