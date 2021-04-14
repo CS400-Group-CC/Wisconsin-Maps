@@ -198,6 +198,7 @@ public class Frontend {
         String endBuilding = scnr.nextLine();
         if (endBuilding.equals("x")) distance();
         BuildingInterface end = findByName(endBuilding);
+        assert end != null;
         System.out.println("You chose: " + end.getName() + " | " + end.getTypes());
         System.out.println("");
 
@@ -417,7 +418,9 @@ public class Frontend {
     private void printBuildings() {
         System.out.println("The List of Buildings at UW-Madison: ");
         for (BuildingInterface building : buildings) {
-            System.out.println(building.getName() + " | " + building.getTypes());
+            if (!building.getTypes().contains("P")) {
+                System.out.println(building.getName() + " | " + building.getTypes());
+            }
         }
         System.out.println("");
     }

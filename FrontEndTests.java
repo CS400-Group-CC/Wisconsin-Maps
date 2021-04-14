@@ -187,10 +187,9 @@ class FrontEndTests {
             String printedToScreen = outputStreamCaptor.toString();
 
             // Make sure the output contains a sample of building objects
-            boolean contains = printedToScreen
-                .contains("504874878-1 | P") &&
-                printedToScreen.contains("917645328-1 | P") &&
-                printedToScreen.contains("Observatory & Babcock (WB) | 04");
+            boolean contains = printedToScreen.contains("Linden & Henry (WB) | 04") &&
+                printedToScreen.contains("Observatory & Babcock (WB) | 04") &&
+                printedToScreen.contains("Fjällräven | B");
             assert (contains);
         } catch (Exception e) {
             // make sure stdin and stdout are set correctly after we get exception in test
